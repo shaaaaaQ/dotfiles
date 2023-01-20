@@ -1,0 +1,4 @@
+configuration {
+    modi: "power:~/.config/rofi/power.sh";
+}
+@theme "/usr/share/rofi/themes/materia.rasi"

@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+set -eu
+
+Yn () {
+    read -r -p "${1} (Y/n): " ans
+    [[ $ans = [nN] ]] && return 1 || return 0
+}
+
+yN () {
+    read -r -p "${1} (y/N): " ans
+    [[ $ans = [yY] ]] && 0 || 1
+}
+
+command_exists () {
+    type "$1" > /dev/null 2>&1
+}
+
+
+_install_pyenv () {
+    if !(command_exists ~/.pyenv/bin/pyenv); then
+        if Yn "pyenv"; then
+            sudo apt install build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+            curl https://pyenv.run | bash
+        fi
+    fi
+}
+_install_choosenim () {
+    if !(command_exists ~/.nimble/bin/choosenim); then
+        if Yn "choosenim"; then
+            curl https://nim-lang.org/choosenim/init.sh -sSf | sh
+        fi
+    fi
+}
+
+_install_rustup () {
+    if !(command_exists ~/.cargo/bin/rustup); then
+        if Yn "rustup"; then
+            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        fi
+    fi
+}
+
+_install_lsd () {
+    if !(command_exists lsd); then
+        if command_exists cargo; then
+            if Yn "lsd"; then
+                cargo install lsd
+            fi
+        else
+            echo "not found"
+        fi
+    fi
+}
+
+_install_pyenv
+_install_choosenim
+_install_rustup
+_install_lsd

@@ -1,0 +1,47 @@
+[colors]
+bg = #383838
+fg = #FFFFFF
+
+
+
+[bar/main]
+modules-left = power i3
+modules-center = date
+modules-right = cpu memory
+width = 100%
+height = 28
+background = ${colors.bg}
+foreground = ${colors.fg}
+font-0 = "RobotoMono Nerd Font:pixelsize=14;3"
+cursor-click = pointer
+
+
+
+[module/power]
+type = custom/text
+content-padding = 1
+content = 
+click-left = exec rofi -show power
+
+
+
+[module/i3]
+type = internal/i3
+enable-click = true
+label-focused-foreground = #FF5370
+
+
+
+[module/date]
+type = internal/date
+interval = 1
+date = %Y-%m-%d %T
+
+
+
+[module/cpu]
+type = internal/cpu
+format-padding = 1
+interval = 1
+format-prefix = " "
+
