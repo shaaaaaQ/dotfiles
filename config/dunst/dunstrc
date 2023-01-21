@@ -1,0 +1,12 @@
+[global]
+    font = Roboto 14
+
+[urgency_low]
+    background = "#383838"
+    foreground = "#ffffff"
+    timeout = 5
+
+[urgency_normal]
+    background = "#383838"
+    foreground = "#ffffff"
+    timeout = 5
