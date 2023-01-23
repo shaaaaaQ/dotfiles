@@ -24,11 +24,19 @@ return require('packer').startup(function(use)
 
     use 'lewis6991/impatient.nvim'
 
+    use {
+        'lukas-reineke/indent-blankline.nvim',
+        config = function() require('config.indent-blankline') end
+    }
+
     -- Colorscheme
     use {
         'navarasu/onedark.nvim',
         config = function() require('onedark').load() end
     }
+
+    -- .editorconfig
+    use 'gpanders/editorconfig.nvim'
 
     -- Statusline
     use {
@@ -76,11 +84,6 @@ return require('packer').startup(function(use)
 
     use 'onsails/lspkind.nvim'
 
-    use {
-        'windwp/nvim-autopairs',
-        config = function() require('nvim-autopairs').setup() end
-    }
-
     -- fzf
     use {
         'nvim-telescope/telescope.nvim',
@@ -95,7 +98,16 @@ return require('packer').startup(function(use)
         run = function() require('nvim-treesitter.install').update() end,
         config = function() require('config.treesitter') end
     }
+
+    use 'p00f/nvim-ts-rainbow'
+
     use 'windwp/nvim-ts-autotag'
+
+    use {
+        'windwp/nvim-autopairs',
+        config = function() require('nvim-autopairs').setup() end
+    }
+
 
     -- Git
     use {
