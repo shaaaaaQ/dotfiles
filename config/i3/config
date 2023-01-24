@@ -38,8 +38,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "rofi -show power"
 
 # Screenshot
-bindsym Print exec --no-startup-id "maim ~/Pictures/$(date +%s).png"
-bindsym $mod+Shift+s exec --no-startup-id "maim -s | xclip -selection primary -f | xclip -selection clipboard"
+bindsym Print exec --no-startup-id "maim ~/Pictures/$(date +%s).png && dunstify '保存しました'"
+bindsym $mod+Shift+s exec --no-startup-id "maim -s | xclip -selection primary -f | xclip -selection clipboard && dunstify 'クリップボードに保存しました'"
 
 
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
