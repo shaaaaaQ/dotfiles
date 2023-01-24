@@ -12,7 +12,7 @@ local highlight_list = {
 
 require('indent_blankline').setup({
     show_end_of_line = true,
-    char = "",
+    char = '',
     char_highlight_list = highlight_list,
     space_char_highlight_list = highlight_list
 })
