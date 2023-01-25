@@ -63,11 +63,11 @@ return require('packer').startup(function(use)
     }
     use 'neovim/nvim-lspconfig'
 
-    --use {
-    --    'jayp0521/mason-null-ls.nvim',
-    --    config = function () require('config.null-ls') end
-    --}
-    --use 'jose-elias-alvarez/null-ls.nvim'
+    use {
+        'jayp0521/mason-null-ls.nvim',
+        config = function () require('config.null-ls') end
+    }
+    use 'jose-elias-alvarez/null-ls.nvim'
 
     -- 補完
     use {

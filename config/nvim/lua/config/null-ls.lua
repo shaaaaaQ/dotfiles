@@ -1,8 +1,14 @@
+local null_ls = require('null-ls')
+
 require('mason-null-ls').setup({
     ensure_installed = {
-        'stylua',
-        'jq'
+        'shellcheck'
     },
     automatic_installation = true,
-    automatic_setup = true
+})
+
+null_ls.setup({
+    sources = {
+        null_ls.builtins.diagnostics.shellcheck
+    }
 })

@@ -8,7 +8,7 @@ Yn () {
 
 yN () {
     read -r -p "${1} (y/N): " ans
-    [[ $ans = [yY] ]] && 0 || 1
+    [[ $ans = [yY] ]] && return 0 || return 1
 }
 
 command_exists () {
@@ -17,7 +17,7 @@ command_exists () {
 
 
 _install_pyenv () {
-    if !(command_exists ~/.pyenv/bin/pyenv); then
+    if ! (command_exists ~/.pyenv/bin/pyenv); then
         if Yn "pyenv"; then
             sudo apt install build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
             curl https://pyenv.run | bash
@@ -25,7 +25,7 @@ _install_pyenv () {
     fi
 }
 _install_choosenim () {
-    if !(command_exists ~/.nimble/bin/choosenim); then
+    if ! (command_exists ~/.nimble/bin/choosenim); then
         if Yn "choosenim"; then
             curl https://nim-lang.org/choosenim/init.sh -sSf | sh
         fi
@@ -33,7 +33,7 @@ _install_choosenim () {
 }
 
 _install_rustup () {
-    if !(command_exists ~/.cargo/bin/rustup); then
+    if ! (command_exists ~/.cargo/bin/rustup); then
         if Yn "rustup"; then
             curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
         fi
@@ -41,7 +41,7 @@ _install_rustup () {
 }
 
 _install_lsd () {
-    if !(command_exists lsd); then
+    if ! (command_exists lsd); then
         if command_exists cargo; then
             if Yn "lsd"; then
                 cargo install lsd
@@ -52,7 +52,44 @@ _install_lsd () {
     fi
 }
 
+_install_rofi_theme () {
+    if [ ! -f /usr/share/rofi/themes/materia.rasi ]; then
+        if Yn "rofi theme"; then
+            sudo curl -fLo /usr/share/rofi/themes/materia.rasi https://raw.githubusercontent.com/shaaaaaQ/materia-rofi-theme/master/materia.rasi
+        fi
+    fi
+}
+
+_install_fonts () {
+    declare -A fonts=(
+        ["Roboto-Regular.ttf"]="https://github.com/googlefonts/roboto/raw/HEAD/src/hinted/Roboto-Regular.ttf"
+        ["Roboto-Mono-Nerd-Font-Complete.ttf"]="https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/RobotoMono/Regular/complete/Roboto%20Mono%20Nerd%20Font%20Complete.ttf"
+        ["Hack-Regular-Nerd-Font-Complete-Mono.ttf"]="https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf"
+    )
+    mkdir -p ~/.local/share/fonts
+    for filename in "${!fonts[@]}"; do
+        if [ ! -f ~/.local/share/fonts/"$filename" ]; then
+            if Yn "$filename"; then
+                curl -fLo ~/.local/share/fonts/"$filename" "${fonts[$filename]}"
+            fi
+        fi
+    done
+    fc-cache
+}
+
+_install_fcitx5_theme () {
+    if [ ! -d ~/.local/share/fcitx5/themes/fcitx5-dark-transparent ]; then
+        if Yn "fcitx5 theme"; then
+            mkdir -p ~/.local/share/fcitx5/themes/fcitx5-dark-transparent
+            git clone https://github.com/hosxy/fcitx5-dark-transparent.git ~/.local/share/fcitx5/themes/fcitx5-dark-transparent
+        fi
+    fi
+}
+
 _install_pyenv
 _install_choosenim
 _install_rustup
 _install_lsd
+_install_rofi_theme
+_install_fonts
+_install_fcitx5_theme
