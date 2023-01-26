@@ -86,10 +86,34 @@ _install_fcitx5_theme () {
     fi
 }
 
+_install_neovim () {
+    if yN "neovim"; then
+        local dir
+        dir=$(mktemp -d /tmp/neovim-XXXXXX)
+        sudo apt install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen
+        git clone --depth 1 https://github.com/neovim/neovim "$dir"
+        cd "$dir"
+        make CMAKE_BUILD_TYPE=RelWithDebInfo
+        sudo make install
+    fi
+}
+
+_setup_i3 () {
+    sudo apt install xorg i3-wm slim alacritty picom rofi pulseaudio pavucontrol polybar feh xclip maim dunst thunar xfce4-settings materia-gtk-theme papirus-icon-theme lxappearance fcitx5-mozc
+    _install_rofi_theme
+    _install_fonts
+    _install_fcitx5_theme
+}
+
+sudo apt update
+sudo apt install curl wget git cmake psmisc unzip build-essential pkg-config fish htop
 _install_pyenv
 _install_choosenim
 _install_rustup
 _install_lsd
-_install_rofi_theme
-_install_fonts
-_install_fcitx5_theme
+
+case "${1:-}" in
+    "nvim") _install_neovim ;;
+    "i3") _setup_i3 ;;
+    *) echo "nvim | i3" ;;
+esac
