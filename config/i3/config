@@ -13,6 +13,9 @@ gaps inner 10px
 # Font for window titles
 font pango:Noto Sans JP 12
 
+# polkit gnome
+exec_always --no-startup-id "/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1"
+
 # Wallpaper
 exec_always --no-startup-id "feh --no-fehbg --bg-fill --randomize ~/.wallpaper/*"
 
