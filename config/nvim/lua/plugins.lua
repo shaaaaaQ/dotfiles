@@ -35,9 +35,6 @@ return require('packer').startup(function(use)
         config = function() require('onedark').load() end
     }
 
-    -- .editorconfig
-    use 'gpanders/editorconfig.nvim'
-
     -- Statusline
     use {
         'nvim-lualine/lualine.nvim',
