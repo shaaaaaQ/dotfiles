@@ -99,7 +99,7 @@ _install_neovim () {
 }
 
 _setup_i3 () {
-    sudo apt install xorg i3-wm slim alacritty picom rofi pulseaudio pavucontrol polybar feh xclip maim dunst thunar xfce4-settings materia-gtk-theme papirus-icon-theme lxappearance fcitx5-mozc
+    sudo apt install xorg i3-wm slim alacritty picom rofi pulseaudio pavucontrol polybar feh xclip maim dunst gnome-keyring thunar thunar-archive-plugin xfce4-settings materia-gtk-theme papirus-icon-theme lxappearance fcitx5-mozc
     _install_rofi_theme
     _install_fonts
     _install_fcitx5_theme
