@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+mkdir -p ~/.config/fish
+mkdir -p ~/.config/fcitx5/conf
+
 rm -rf ~/.config/nvim
 rm -rf ~/.config/i3
 rm -rf ~/.config/polybar
@@ -22,6 +25,7 @@ ln -nfs ~/dotfiles/config/picom ~/.config/picom
 ln -nfs ~/dotfiles/config/dunst ~/.config/dunst
 
 ln -nfs ~/dotfiles/config/fish/config.fish ~/.config/fish/config.fish
+ln -nfs ~/dotfiles/config/fish/fish_plugins ~/.config/fish/fish_plugins
 ln -nfs ~/dotfiles/config/fcitx5/conf/classicui.conf ~/.config/fcitx5/conf/classicui.conf
 
 ln -nfs ~/dotfiles/bin ~/.bin
