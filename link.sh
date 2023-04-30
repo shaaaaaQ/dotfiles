@@ -10,6 +10,7 @@ rm -rf ~/.config/rofi
 rm -rf ~/.config/alacritty
 rm -rf ~/.config/picom
 rm -rf ~/.config/dunst
+rm -rf ~/.config/Thunar
 
 rm -rf ~/.bin
 rm -rf ~/.wallpaper
@@ -23,6 +24,7 @@ ln -nfs ~/dotfiles/config/rofi ~/.config/rofi
 ln -nfs ~/dotfiles/config/alacritty ~/.config/alacritty
 ln -nfs ~/dotfiles/config/picom ~/.config/picom
 ln -nfs ~/dotfiles/config/dunst ~/.config/dunst
+ln -nfs ~/dotfiles/config/Thunar ~/.config/Thunar
 
 ln -nfs ~/dotfiles/config/fish/config.fish ~/.config/fish/config.fish
 ln -nfs ~/dotfiles/config/fish/fish_plugins ~/.config/fish/fish_plugins
