@@ -7,7 +7,7 @@ fg = #FFFFFF
 [bar/main]
 modules-left = i3
 modules-center = date
-modules-right = battery cpu pulseaudio
+modules-right = battery cpu temperature pulseaudio
 width = 100%
 height = 28
 background = ${colors.bg}
@@ -44,6 +44,11 @@ type = internal/cpu
 format-padding = 1
 interval = 1
 format-prefix = " "
+
+[module/temperature]
+type = internal/temperature
+hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon3/temp1_input
+format-padding = 1
 
 [module/battery]
 type = internal/battery
