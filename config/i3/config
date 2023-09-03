@@ -2,7 +2,9 @@
 # https://i3wm.org/docs/userguide.html
 
 # VMware
-exec --no-startup-id vmware-user
+# exec --no-startup-id vmware-user
+
+exec --no-startup-id dex -a
 
 # mod = Windows key
 set $mod Mod4
