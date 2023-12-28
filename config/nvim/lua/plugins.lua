@@ -110,7 +110,7 @@ return require('packer').startup(function(use)
     }
 
     -- Nim
-    use 'zah/nim.vim'
+    -- use 'zah/nim.vim'
 
     if packer_bootstrap then
         require('packer').sync()
