@@ -8,7 +8,11 @@
       <row path="https://skk-dev.github.io/dict/SKK-JISYO.geo.gz" enabled="1" />
       <row path="https://skk-dev.github.io/dict/SKK-JISYO.propernoun.gz" enabled="1" />
       <row path="https://skk-dev.github.io/dict/SKK-JISYO.station.gz" enabled="1" />
-      <row path="https://raw.githubusercontent.com/shaaaaaQ/genshin-dict/main/genshin-dictionary/%E5%8E%9F%E7%A5%9E%E8%BE%9E%E6%9B%B8_skk.txt" enabled="1" />
+      <row path="https://raw.githubusercontent.com/shaaaaaQ/genshin-dict/main/genshin-dictionary/%E5%8E%9F%E7%A5%9E%E8%BE%9E%E6%9B%B8_skk.txt" enabled="0" />
+      <row path="https://raw.githubusercontent.com/skk-dev/dict/master/SKK-JISYO.emoji" enabled="1" />
+      <row path="https://raw.githubusercontent.com/shaaaaaQ/dict/main/out/Genshin%20Impact%20SKK.txt" enabled="1" />
+      <row path="https://raw.githubusercontent.com/shaaaaaQ/dict/main/out/Honkai%20Star%20Rail%20SKK.txt" enabled="1" />
+      <row path="https://raw.githubusercontent.com/shaaaaaQ/dict/main/out/Wuthering%20Waves%20SKK.txt" enabled="1" />
     </list>
   </section>
   <section name="server">
@@ -29,7 +33,7 @@
   </section>
   <section name="behavior">
     <key name="defaultmode" value="0" />
-    <key name="defmodeascii" value="0" />
+    <key name="defmodeascii" value="1" />
     <key name="begincvokuri" value="1" />
     <key name="precedeokuri" value="0" />
     <key name="shiftnnokuri" value="1" />
