@@ -588,6 +588,16 @@
       <row ro="zL" hi="⇒" ka="⇒" an="⇒" so="0" />
       <row ro="z;" hi="゛" ka="゛" an="ﾞ" so="0" />
       <row ro="z:" hi="゜" ka="゜" an="ﾟ" so="0" />
+      <row ro="z0" hi="０" ka="０" an="０" so="0" />
+      <row ro="z1" hi="１" ka="１" an="１" so="0" />
+      <row ro="z2" hi="２" ka="２" an="２" so="0" />
+      <row ro="z3" hi="３" ka="３" an="３" so="0" />
+      <row ro="z4" hi="４" ka="４" an="４" so="0" />
+      <row ro="z5" hi="５" ka="５" an="５" so="0" />
+      <row ro="z6" hi="６" ka="６" an="６" so="0" />
+      <row ro="z7" hi="７" ka="７" an="７" so="0" />
+      <row ro="z8" hi="８" ka="８" an="８" so="0" />
+      <row ro="z9" hi="９" ka="９" an="９" so="0" />
     </list>
   </section>
   <section name="jlatin">

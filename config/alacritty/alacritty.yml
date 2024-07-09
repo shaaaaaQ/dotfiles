@@ -1,7 +1,10 @@
 font:
   normal:
-    family: Hack Nerd Font Mono
-  size: 11
+    family: Hackgen Console NF
+  size: 12
+
+window:
+  opacity: 0.9
 
 # Colors (One Dark - https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
 # https://github.com/alacritty/alacritty/wiki/Color-schemes

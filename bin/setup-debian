@@ -64,7 +64,7 @@ _install_fonts () {
     declare -A fonts=(
         ["Roboto-Regular.ttf"]="https://github.com/googlefonts/roboto/raw/HEAD/src/hinted/Roboto-Regular.ttf"
         ["Roboto-Mono-Nerd-Font-Complete.ttf"]="https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/RobotoMono/Regular/complete/Roboto%20Mono%20Nerd%20Font%20Complete.ttf"
-        ["Hack-Regular-Nerd-Font-Complete-Mono.ttf"]="https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf"
+        # ["Hack-Regular-Nerd-Font-Complete-Mono.ttf"]="https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf"
     )
     mkdir -p ~/.local/share/fonts
     for filename in "${!fonts[@]}"; do
