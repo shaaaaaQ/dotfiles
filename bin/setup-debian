@@ -105,6 +105,11 @@ _setup_i3 () {
     _install_fcitx5_theme
 }
 
+_setup_hyprland () {
+    # Koujichuu
+    sudo apt install hyprland wofi waybar alacritty pavucontrol jq grim slurp wl-clipboard libnotify-bin dunst
+}
+
 sudo apt update
 sudo apt install curl wget git cmake psmisc unzip build-essential pkg-config fish htop
 _install_pyenv
