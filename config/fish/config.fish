@@ -1,4 +1,4 @@
-set PATH /sbin ~/.bin ~/.pyenv/bin ~/.cargo/bin ~/.nimble/bin $PATH
+set PATH /sbin ~/.bin ~/.local/bin ~/.pyenv/bin ~/.cargo/bin ~/.nimble/bin $PATH
 
 alias ls='lsd'
 alias vim='nvim'
