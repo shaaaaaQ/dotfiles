@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
-<action>
-	<icon>utilities-terminal</icon>
-	<name>ここで Terminal を開く</name>
-	<submenu></submenu>
-	<unique-id>1674811323102479-1</unique-id>
-	<command>alacritty --working-directory %f</command>
-	<description></description>
-	<range></range>
-	<patterns>*</patterns>
-	<startup-notify/>
-	<directories/>
-</action>
-<action>
-	<icon>vscode</icon>
-	<name>VSCodeで開く</name>
-	<submenu></submenu>
-	<unique-id>1680092352154506-1</unique-id>
-	<command>code %f</command>
-	<description></description>
-	<range>*</range>
-	<patterns>*</patterns>
-	<directories/>
-	<image-files/>
-	<text-files/>
-</action>
+    <action>
+        <icon>utilities-terminal</icon>
+        <name>ターミナルで開く</name>
+        <submenu></submenu>
+        <unique-id>1674811323102479-1</unique-id>
+        <command>alacritty --working-directory %f</command>
+        <description></description>
+        <range></range>
+        <patterns>*</patterns>
+        <startup-notify />
+        <directories />
+    </action>
+    <action>
+        <icon>vscode</icon>
+        <name>VSCodeで開く</name>
+        <submenu></submenu>
+        <unique-id>1680092352154506-1</unique-id>
+        <command>code %f</command>
+        <description></description>
+        <range>*</range>
+        <patterns>*</patterns>
+        <directories />
+        <image-files />
+        <text-files />
+    </action>
 </actions>
