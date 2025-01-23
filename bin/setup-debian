@@ -107,7 +107,8 @@ _setup_i3 () {
 
 _setup_hyprland () {
     # Koujichuu
-    sudo apt install hyprland wofi waybar alacritty pavucontrol jq grim slurp wl-clipboard libnotify-bin dunst
+    # hyprshot
+    sudo apt install hyprland wofi waybar alacritty pavucontrol jq grim slurp wl-clipboard libnotify-bin dunst hyprpaper cmake meson cpio
 }
 
 sudo apt update

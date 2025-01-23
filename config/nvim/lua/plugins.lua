@@ -87,20 +87,20 @@ return require('packer').startup(function(use)
     use 'nvim-telescope/telescope-file-browser.nvim'
 
     -- treesitter
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = function() require('nvim-treesitter.install').update() end,
-        config = function() require('config.treesitter') end
-    }
+    -- use {
+    --     'nvim-treesitter/nvim-treesitter',
+    --     run = function() require('nvim-treesitter.install').update() end,
+    --     config = function() require('config.treesitter') end
+    -- }
 
-    use 'p00f/nvim-ts-rainbow'
+    -- use 'p00f/nvim-ts-rainbow'
 
-    use 'windwp/nvim-ts-autotag'
+    -- use 'windwp/nvim-ts-autotag'
 
-    use {
-        'windwp/nvim-autopairs',
-        config = function() require('nvim-autopairs').setup() end
-    }
+    -- use {
+    --     'windwp/nvim-autopairs',
+    --     config = function() require('nvim-autopairs').setup() end
+    -- }
 
 
     -- Git
