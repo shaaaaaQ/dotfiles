@@ -63,7 +63,7 @@ _install_rofi_theme () {
 _install_fonts () {
     declare -A fonts=(
         ["Roboto-Regular.ttf"]="https://github.com/googlefonts/roboto/raw/HEAD/src/hinted/Roboto-Regular.ttf"
-        ["Roboto-Mono-Nerd-Font-Complete.ttf"]="https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/RobotoMono/Regular/complete/Roboto%20Mono%20Nerd%20Font%20Complete.ttf"
+        # ["Roboto-Mono-Nerd-Font-Complete.ttf"]="https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/RobotoMono/Regular/complete/Roboto%20Mono%20Nerd%20Font%20Complete.ttf"
         # ["Hack-Regular-Nerd-Font-Complete-Mono.ttf"]="https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf"
     )
     mkdir -p ~/.local/share/fonts
@@ -108,7 +108,11 @@ _setup_i3 () {
 _setup_hyprland () {
     # Koujichuu
     # hyprshot
-    sudo apt install hyprland wofi waybar alacritty pavucontrol jq grim slurp wl-clipboard libnotify-bin dunst hyprpaper cmake meson cpio
+    # rofi wayland
+    sudo apt install hyprland waybar alacritty pavucontrol jq grim slurp wl-clipboard libnotify-bin dunst hyprpaper cmake meson cpio
+    _install_rofi_theme
+    _install_fonts
+    _install_fcitx5_theme
 }
 
 sudo apt update
@@ -121,5 +125,6 @@ _install_lsd
 case "${1:-}" in
     "nvim") _install_neovim ;;
     "i3") _setup_i3 ;;
-    *) echo "nvim | i3" ;;
+    "hypr") _setup_hyprland ;;
+    *) echo "nvim | i3 | hypr" ;;
 esac
