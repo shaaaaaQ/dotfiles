@@ -110,6 +110,7 @@ _setup_hyprland () {
     # hyprshot
     # rofi wayland
     sudo apt install hyprland waybar alacritty pavucontrol jq grim slurp wl-clipboard libnotify-bin dunst hyprpaper cmake meson cpio
+    # sudo apt install libdrm-dev libinput-dev libseat-dev libdisplay-info-dev libliftoff-dev libgbm-dev libhyprlang-dev libhyprcursor-dev libhyprutils-dev hyprwayland-scanner libxcb-xfixes0-dev libxcb-composite0-dev libxcb-res0-dev libxcb-errors-dev libtomlplusplus-dev
     _install_rofi_theme
     _install_fonts
     _install_fcitx5_theme
