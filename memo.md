@@ -33,4 +33,10 @@ sudo cp resources/niri.desktop /usr/local/share/wayland-sessions/
 sudo cp resources/niri-portals.conf /usr/local/share/xdg-desktop-portal/
 sudo cp resources/niri.service /etc/systemd/user/
 sudo cp resources/niri-shutdown.target /etc/systemd/user/
+sudo nvim /etc/systemd/user/niri.service
+```
+```bash
+git clone https://github.com/Supreeeme/xwayland-satellite
+cd xwayland-satellite
+cargo build --release -F systemd
 ```
