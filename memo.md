@@ -1,12 +1,6 @@
 ### rofi wayland (debian)
-https://github.com/lbonn/rofi/blob/wayland/INSTALL.md
 ```bash
-git clone --recursive https://github.com/lbonn/rofi
-cd rofi/
-sudo apt install libxkbcommon-x11-dev libxcb-xkb-dev libxcb-util-dev libgdk-pixbuf-2.0-dev libxkbcommon-dev libpango1.0-dev libcairo2-dev libglib2.0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-keysyms1-dev libstartup-notification0-dev wayland-protocols libwayland-dev flex bison
-meson setup build
-ninja -C build
-ninja -C build install
+sudo apt install rofi
 ```
 
 ### hyprslidr
@@ -25,7 +19,7 @@ https://github.com/YaLTeR/niri/wiki/Getting-Started#manual-installation
 ```bash
 git clone https://github.com/YaLTeR/niri
 cd niri
-sudo apt install libpipewire-0.3-dev clang
+sudo apt install libpipewire-0.3-dev clang libglibc2.0-dev libudev-dev libseat-dev libpango1.0-dev libdisplay-info-dev libgbm-dev libxkbcommon-dev libegl1-mesa-dev libwayland-dev libinput-dev libdbus-1-dev libsystemd-dev
 cargo build --release
 sudo cp target/release/niri /usr/local/bin/
 sudo cp resources/niri-session /usr/local/bin/
