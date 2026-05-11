@@ -19,7 +19,7 @@ https://github.com/YaLTeR/niri/wiki/Getting-Started#manual-installation
 ```bash
 git clone https://github.com/YaLTeR/niri
 cd niri
-sudo apt install libpipewire-0.3-dev clang libglibc2.0-dev libudev-dev libseat-dev libpango1.0-dev libdisplay-info-dev libgbm-dev libxkbcommon-dev libegl1-mesa-dev libwayland-dev libinput-dev libdbus-1-dev libsystemd-dev
+sudo apt install xwayland libpipewire-0.3-dev clang libglibc2.0-dev libudev-dev libseat-dev libpango1.0-dev libdisplay-info-dev libgbm-dev libxkbcommon-dev libegl1-mesa-dev libwayland-dev libinput-dev libdbus-1-dev libsystemd-dev
 cargo build --release
 sudo cp target/release/niri /usr/local/bin/
 sudo cp resources/niri-session /usr/local/bin/
