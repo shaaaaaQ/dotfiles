@@ -32,5 +32,6 @@ sudo nvim /etc/systemd/user/niri.service
 ```bash
 git clone https://github.com/Supreeeme/xwayland-satellite
 cd xwayland-satellite
+sudo apt install libxcb-util-dev libxcb-cursor-dev
 cargo build --release -F systemd
 ```
