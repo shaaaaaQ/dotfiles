@@ -15,6 +15,7 @@ rm -rf ~/.config/libskk
 rm -rf ~/.config/hypr
 rm -rf ~/.config/niri
 rm -rf ~/.config/waybar
+rm -rf ~/.config/yazi
 
 rm -rf ~/.bin
 rm -rf ~/.wallpaper
@@ -33,6 +34,7 @@ ln -nfs ~/dotfiles/config/libskk ~/.config/libskk
 ln -nfs ~/dotfiles/config/hypr ~/.config/hypr
 ln -nfs ~/dotfiles/config/niri ~/.config/niri
 ln -nfs ~/dotfiles/config/waybar ~/.config/waybar
+ln -nfs ~/dotfiles/config/yazi ~/.config/yazi
 
 ln -nfs ~/dotfiles/config/fish/config.fish ~/.config/fish/config.fish
 ln -nfs ~/dotfiles/config/fish/fish_plugins ~/.config/fish/fish_plugins
