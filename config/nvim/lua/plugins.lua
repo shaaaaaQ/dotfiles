@@ -25,7 +25,11 @@ require("lazy").setup({
         "navarasu/onedark.nvim",
         lazy = false,
         priority = 1000,
-        config = function()
+        opts = {
+            transparent = true
+        },
+        config = function(_, opts)
+            require("onedark").setup(opts)
             require("onedark").load()
         end,
     },
