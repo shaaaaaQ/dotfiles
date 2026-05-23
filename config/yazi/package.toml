@@ -1,0 +1,7 @@
+[plugin]
+deps = []
+
+[[flavor.deps]]
+use = "shaaaaaQ/onedark"
+rev = "e78e0ae"
+hash = "95e5224a49d2e3f100ae509feaa62f5"

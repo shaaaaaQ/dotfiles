@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+target_file="$1"
+
+# zellij内かの判定
+if [[ -n "$ZELLIJ_SESSION_NAME" ]]; then
+    zellij run \
+        --width 80% \
+        --height 80% \
+        --x 10% \
+        --y 10% \
+        --floating \
+        --close-on-exit \
+        --pinned true \
+        -- nvim "$target_file"
+else
+    nvim "$target_file"
+fi
