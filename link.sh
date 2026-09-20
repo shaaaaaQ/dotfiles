@@ -39,6 +39,8 @@ ln -nfs ~/dotfiles/config/yazi ~/.config/yazi
 ln -nfs ~/dotfiles/config/fish/config.fish ~/.config/fish/config.fish
 ln -nfs ~/dotfiles/config/fish/fish_plugins ~/.config/fish/fish_plugins
 ln -nfs ~/dotfiles/config/fcitx5/conf/classicui.conf ~/.config/fcitx5/conf/classicui.conf
+ln -nfs ~/dotfiles/config/fcitx5/conf/skk.conf ~/.config/fcitx5/conf/skk.conf
+ln -nfs ~/dotfiles/config/fcitx5/conf/wayland.conf ~/.config/fcitx5/conf/wayland.conf
 ln -nfs ~/dotfiles/config/libinput-gestures.conf ~/.config/libinput-gestures.conf
 
 ln -nfs ~/dotfiles/bin ~/.bin
