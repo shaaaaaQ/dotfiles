@@ -1,0 +1,12 @@
+{{- $machine := promptStringOnce . "machine" "Machine profile (hostname by default)" .chezmoi.hostname -}}
+{{- $desktop := "none" -}}
+{{- if eq .chezmoi.os "linux" -}}
+{{- $desktop = promptChoiceOnce . "desktop" "Desktop configuration" (list "legacy" "none" "niri" "i3" "hypr") "legacy" -}}
+{{- end -}}
+sourceDir = {{ .chezmoi.config.sourceDir | quote }}
+mode = "file"
+
+[data]
+machine = {{ $machine | quote }}
+desktop = {{ $desktop | quote }}
+powershell = {{ get . "powershell" | default false }}
