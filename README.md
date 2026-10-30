@@ -2,7 +2,8 @@
 ## 構成
 
 - `home/dot_config/`: `~/.config`、Neovim は Windows と共有
-- `home/dot_bin/` / `dot_wallpaper/`: `~/.bin` / `~/.wallpaper`
+- `home/dot_bin/`: `~/.bin`
+- `dot_wallpaper/`: `~/.wallpaper`
 - `home/AppData/`: Windows の Neovim / Alacritty / CorvusSKK
 - `home/.chezmoidata.toml`: 共通設定 / PC 別設定
 - `home/.chezmoiignore`: OS / ディストリ / デスクトップ別の配置ルール
