@@ -1,3 +1,5 @@
+{{- $machine := .machine | default .chezmoi.hostname -}}
+{{- $pc := get .machines $machine | default dict -}}
 // This config is in the KDL format: https://kdl.dev
 // "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:
@@ -67,13 +69,9 @@ input {
 
 // Monitor
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
-output "eDP-1" {
-    off
-}
-
-output "HDMI-A-1" {
-    mode "1920x1080@120.000"
-}
+{{ with get $pc "niriOutputs" -}}
+{{ include (joinPath ".chezmoitemplates" .) }}
+{{- end }}
 
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:

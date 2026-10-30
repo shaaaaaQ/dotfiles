@@ -1,0 +1,7 @@
+# Preserve the old Linux link.sh target set unless a desktop is selected.
+desktop = "legacy"
+machine = ""
+powershell = false
+
+# Add real machine profiles here. The key is data.machine or the hostname.
+[machines]

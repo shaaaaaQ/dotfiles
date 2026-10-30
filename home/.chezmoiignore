@@ -1,0 +1,48 @@
+{{- $machine := .machine | default .chezmoi.hostname -}}
+{{- $pc := get .machines $machine | default dict -}}
+{{- $desktop := get $pc "desktop" | default .desktop -}}
+{{- if not (has $desktop (list "legacy" "none" "niri" "i3" "hypr")) -}}
+{{- fail (printf "Unknown desktop profile: %s" $desktop) -}}
+{{- end }}
+{{ if ne .chezmoi.os "windows" }}
+AppData
+Documents
+{{ else }}
+{{ if not .powershell }}
+Documents
+{{ end }}
+{{ end }}
+{{ if ne .chezmoi.os "linux" }}
+.config
+.bin
+.wallpaper
+{{ else }}
+{{ if ne .chezmoi.osRelease.id "debian" }}
+.bin/setup-debian
+{{ end }}
+{{ if eq $desktop "none" }}
+.wallpaper
+.config/alacritty
+.config/ghostty
+.config/dunst
+.config/Thunar
+.config/fcitx5
+.config/libskk
+.config/libinput-gestures.conf
+.config/rofi
+{{ end }}
+{{ if not (has $desktop (list "legacy" "niri")) }}
+.config/niri
+{{ end }}
+{{ if not (has $desktop (list "legacy" "niri" "hypr")) }}
+.config/waybar
+{{ end }}
+{{ if not (has $desktop (list "legacy" "hypr")) }}
+.config/hypr
+{{ end }}
+{{ if not (has $desktop (list "legacy" "i3")) }}
+.config/i3
+.config/picom
+.config/polybar
+{{ end }}
+{{ end }}
